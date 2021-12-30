@@ -21,6 +21,7 @@ app.layout = Div(
         P('Esse Dash tem como objetivo proporcionar a visualização das pesquisas respondidas pelos discentes.'),
         H3('Gráfico Box-plot'),
         Graph(
+            config={'displayModeBar': False}, #tirar os ícones dos gráficos
             figure={
                 'data': [
                     {'y': dataBase[0]['FEAAC'], 
@@ -37,8 +38,13 @@ app.layout = Div(
                     },
                 ],
                 'layout': {
-
-                }
+                    'title': 'Meu gráfico',
+                    #'paper_bgcolor': '#222225', #escolher a cor de fundo do gráfico
+                    'titlefont': {
+                        'size': 20,
+                        #'color': '#e8e9ed',
+                    },
+                },
             }
         )
 
